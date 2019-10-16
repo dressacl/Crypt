@@ -10,14 +10,14 @@
             // Variaveis de entrada de dados
             //$usuario = $_POST['usuario'];
             $dados = $_POST['dados'];
-            // utilizando a criptografia de base64 para segurança
+            // utilizando a criptografia de base64 para seguranÃ§a
             $AG = base64_encode($dados);
             // chave utilizando caracter especial e as iniciais dos programadores e suas idades
             $chave = '[[[AG2122]]]';
             $chave = md5($chave);
             // concatenando a chave junto a criptografia de base64
             $criptografiaDeAG = $chave.$AG;
-            // function do php substr retirando a posição da chave junto a base64_decode retirando a chave
+            // function do php substr retirando a posiÃ§Ã£o da chave junto a base64_decode retirando a chave
             $saida = base64_decode($descriptografia= str_replace($chave, '',$criptografiaDeAG));
         ?>
         
